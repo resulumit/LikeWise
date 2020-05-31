@@ -15,4 +15,4 @@ Any issues with the data, package, and/or app can be reported at [https://github
 
 This app is based on  `rtweet` &mdash; a great R [package](https://rtweet.info/) by [Michael W. Kearney](https://mikewk.com/).
 
-It uses free but limited services at [Twitter Developper](https://developer.twitter.com/en), and [shinyapps.io](https://www.shinyapps.io/). If the traffic surpasses these limites, the app will be unavailable.
+It uses free but limited services at [Twitter Developper](https://developer.twitter.com/en), and [shinyapps.io](https://www.shinyapps.io/). If the traffic surpasses these limites the app will be unavailable.
