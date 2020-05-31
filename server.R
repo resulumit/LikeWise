@@ -3,9 +3,11 @@
 # load the libraries
 library(shiny)
 library(rtweet)
+library(httpuv)
 library(DT)
 library(dplyr)
 library(stringr)
+source("the_keys.R")
 
 
 # start the function
@@ -21,7 +23,7 @@ function(input, output) {
                    - It could also be that the servers are overloaded."))
 
     # get_favorites() from the rtweet package
-    get_favorites(user = input$liked_by, n = 10)
+    get_favorites(user = input$liked_by)
       
   # end eventReactive  
   }
@@ -39,7 +41,7 @@ function(input, output) {
       
       # 
       mutate(tw_link = paste0("<a href='","https://twitter.com/", screen_name, "/status/", status_id, "' target='_blank'>", "Click here","</a>"),
-             tw_date = format(as.Date(created_at), "%d/%m/%Y")) %>% 
+             tw_date = format(as.Date(created_at), "%Y/%m/%d")) %>% 
       
       # select variables
       select("Tweet" = text, "By" = screen_name, "On" = tw_date, "Link" = tw_link),
