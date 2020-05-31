@@ -4,7 +4,7 @@ A Shiny app that filters users' liked tweets.
 
 ## Description
 
-This repository includes the code for a Shiny App, live at [https://resulumit.shinyapps.io/psjournals](https://resulumit.shinyapps.io/likewise).
+This repository includes the code for a Shiny App, live at [https://resulumit.shinyapps.io/likewise](https://resulumit.shinyapps.io/likewise).
 
 ## Issues
 
