@@ -16,7 +16,7 @@ fluidPage(
   titlePanel("LikeWise"),
 
 # Help text ----
-  helpText("An app that filters Twitter users' liked tweets", HTML("&mdash;"),
+  helpText("An app that filters users' likes on Twitter", HTML("&mdash;"),
             "by", a("Resul Umit", href = "https://resulumit.com"), "(2020)."),
 
 
@@ -50,14 +50,14 @@ bsTooltip(id = "tweeted_by", title = "Not case or @ sensitive &mdash; anyting go
           placement = "top", options = list(container = "body")),
 
 # Input: Date ----
-dateRangeInput("daterange", label = "...within the date range", format = "dd/mm/yyyy", separator = HTML("&ndash;"),
-               start = as.POSIXct(Sys.Date() - 30), end = as.POSIXct(Sys.Date())),
+dateRangeInput("daterange", label = "...within the date range", format = "yyyy/mm/dd", separator = HTML("&ndash;"),
+               start = as.POSIXct(Sys.Date() - 365), end = as.POSIXct(Sys.Date())),
 
 # Input: Scope ----
 textInput(inputId = "text_search", label = "...including the pattern", placeholder = "Filter by text pattern"),
 
 # Input: Tooltip for Scope ----
-bsTooltip(id = "text_search", title = "E.g., us returns Tweets with us, bus, US, USA ...",
+bsTooltip(id = "text_search", title = "Searching <i>us</i> catches <i>us</i>, <i>bus</i>, <i>US</i>, <i>USA</i> ...",
           placement = "top", options = list(container = "body")),
 
 
@@ -70,7 +70,8 @@ mainPanel(
     tabPanel("Table", DT::dataTableOutput(outputId = "table")),
     tabPanel("Notes",
              br(),
-             p("The source code is available at", a("https://github.com/resulumit/likewise.", href = "https://github.com/resulumit/likewise"))
+             p("The source code is available at", a("https://github.com/resulumit/likewise.", href = "https://github.com/resulumit/likewise"),
+             p("Twitter will not return more than 3200 most recent likes. In practice, it may return fewer than this limit at any given request."))
              )))
 
 # End: sidebarLayout ----
