@@ -1,4 +1,4 @@
-# likewise
+# LikeWise
 
 A Shiny app that filters users' liked tweets.
 
