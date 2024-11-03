@@ -1,3 +1,5 @@
+**Update (November 2024): Following changes to Twitter's API access policies, Twitter data is no longer freely available. As a result, this app is now offline.**
+
 # LikeWise
 
 A Shiny app that filters users' liked tweets.
